@@ -45,7 +45,7 @@ class AppVersion extends Resource
             InlineText::make(name: $this->translate(key: 'field.title'), attribute: 'title'),
 
             InlineSelect::make(name: $this->translate(key: 'field.status'), attribute: 'status_db')
-                ->options(fn () => $this->allStatuses())
+                ->options(fn () => AppVersionModel::allStatuses())
                 ->default(fn () => VersionStatus::CURRENT->toDB())
                 ->inlineOnIndex()
                 ->enableOneStepOnIndex(),
