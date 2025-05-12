@@ -1,22 +1,35 @@
 {
     "name": "wamesk/laravel-nova-app-version-manager",
-    "version": "1.0.1",
+    "description": "Laravel Nova App version manager.",
+    "version": "2.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "WAME s.r.o.",
+            "homepage": "https://wame.sk"
+        }
+    ],
+    "require": {
+        "laravel/nova": "^5.0",
+        "wamesk/laravel-app-version-manager": "^1.0",
+        "outl1ne/nova-inline-text-field": "^3.0",
+        "kirschbaum-development/nova-inline-select": "2.*"
+    },
     "autoload": {
         "psr-4": {
             "Wame\\LaravelNovaAppVersionManager\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "adrianzofcin",
-            "email": "adrianzofcin@gmail.com"
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wame\\LaravelNovaAppVersionManager\\Providers\\LaravelNovaAppVersionManagerProvider"
+            ]
         }
-    ],
-    "require": {
-        "laravel/framework": "8.*|9.*|10.*",
-        "laravel/nova": "4.*",
-        "wamesk/laravel-app-version-manager": "0.*",
-        "outl1ne/nova-inline-text-field": "2.*",
-        "kirschbaum-development/nova-inline-select": "2.*"
-    }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

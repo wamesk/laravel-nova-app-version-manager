@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace App\Nova;
+namespace Wame\LaravelNovaAppVersionManager\Nova;
 
 use Illuminate\Http\Request;
 use KirschbaumDevelopment\Nova\InlineSelect;
