@@ -11,7 +11,7 @@
     ],
     "require": {
         "laravel/nova": "^5.0",
-        "wamesk/laravel-app-version-manager": "^1.0",
+        "wamesk/laravel-app-version-manager": "^0.1",
         "outl1ne/nova-inline-text-field": "^3.0",
         "kirschbaum-development/nova-inline-select": "2.*"
     },
