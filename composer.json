@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "laravel/framework": "8.*|9.*|10.*",
+        "laravel/framework": "8.*|9.*|10.*|11.*",
         "laravel/nova": "4.*",
         "wamesk/laravel-app-version-manager": "0.*",
         "outl1ne/nova-inline-text-field": "2.*",
