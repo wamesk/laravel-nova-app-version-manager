@@ -7,6 +7,7 @@ namespace Wame\LaravelNovaAppVersionManager\Nova;
 use App\Nova\Resource;
 use Illuminate\Http\Request;
 use KirschbaumDevelopment\Nova\InlineSelect;
+use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -56,6 +57,16 @@ class AppVersion extends Resource
                 ->options(fn () => AppVersionModel::allStatuses())
                 ->displayUsingLabels()
                 ->default(fn () => VersionStatus::CURRENT->toDB()),
+
+            DateTime::make(name: $this->translate(key: 'field.created_at'), attribute: 'created_at')
+                ->sortable()
+                ->filterable()
+                ->exceptOnForms(),
+
+            DateTime::make(name: $this->translate(key: 'field.updated_at'), attribute: 'updated_at')
+                ->sortable()
+                ->filterable()
+                ->exceptOnForms(),
         ];
     }
 
